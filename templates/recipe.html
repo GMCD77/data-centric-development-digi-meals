@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+
+{% block content %}
+ <div class="row col s3">
+      {% for recipe in recipes %}
+    <div class="col s3">
+      <div class="card">
+        <div class="card-image size">
+          <img src="{{recipe.image_link}}">
+          <span class="card-title">{{recipe.recipe_name}}</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">favorite</i></a>
+        </div>
+        <div class="card-content">
+          <p>{{recipe.description}}</p>
+        </div>
+         <div class="card-action">
+          <a href="#">This is cvcxvxcvxvxcva vfjkdvfndkjnlink</a>
+        </div>
+      </div>
+    </div>
+     {% endfor %}
+  </div>
+
+         {% endblock %}
+
+         </div>
+
+
+

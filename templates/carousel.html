@@ -1,0 +1,35 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="row col12">
+<ul class="collection">
+    <li class="collection-item avatar">
+      <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="circle">
+      <span class="title">Title</span>
+      <p>First Line <br>
+         Second Line
+      </p>
+</ul>
+</div>
+<div class="row col s3">
+      {% for utensils in utensils %}
+    <div class="col s3">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{utensils.image_link}}">
+          <span class="card-title">Card <Title></Title></span>
+          <a class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">favorite</i></a>
+        </div>
+        <div class="card-content">
+          <p>Bla Bla </p>
+        </div>
+         <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+     {% endfor %}
+  </div>
+
+
+  {% endblock %}

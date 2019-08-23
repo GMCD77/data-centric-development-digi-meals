@@ -1,0 +1,28 @@
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+     }
+
+  main {
+    flex: 1 0 auto;
+  }
+  nav {
+    background-color: #0b0c10;
+  }
+
+  nav .ul .a {
+    color: #45a29e;
+  }
+
+  .card {
+    background-color: #c5c6c7;
+  }
+
+  .card .card-image img {
+      height: 350px;
+      object-fit: cover;
+  }
+  .page-footer {
+    background-color: #0b0c10;
+  }

@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content %}
+
+<div class="row col s3">
+      {% for utensils in utensils %}
+    <div class="col s12">
+      <div class="card">
+        <div class="card-image size">
+          <img src="{{utensils.image_link}}">
+          <span class="card-title">Card <Title></Title></span>
+          <a class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">favorite</i></a>
+        </div>
+        <div class="card-content">
+          <p>Bla Bla </p>
+        </div>
+         <div class="card-action">
+          <a href="#">This is a lihhhhnk</a>
+        </div>
+      </div>
+    </div>
+     {% endfor %}
+  </div>
+
+
+  {% endblock %}
+
