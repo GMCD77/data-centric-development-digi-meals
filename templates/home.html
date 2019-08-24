@@ -17,7 +17,12 @@
           <a class="btn-floating halfway-fab waves-effect waves-light pink"><i class="material-icons">favorite</i></a>
         </div>
         <div class="card-content">
-          <p>{{recipe.description}}</p>
+          <p class="truncate">{{recipe.description}}</p>
+           <!--<div class="col s3">
+                   <a href ="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red">Delete Recipe</a>
+                    <a href ="{{url_for('edit_recipe', recipe_id=recipe._id)}}"class="waves-effect waves-light btn btn_small green">Edit</a>
+
+                </div>-->
         </div>
          <div class="card-action">
           <a href="#">This is a link</a>

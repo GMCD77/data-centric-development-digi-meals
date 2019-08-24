@@ -11,13 +11,16 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
+      <a href="#!" class="brand-logo">
+          <img class="responsive-img" id="logo" src="{{url_for('static', filename='images/digi-meals-logo.png')}}"/>
+          </a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
 
-        <li><a href="{{url_for('get_recipes')}}">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="{{url_for('add_recipe')}}">Add Recipe</a></li>
+        <li><a href="{{url_for('get_recipes')}}">HOME</a></li>
+        <li><a href="{{url_for('get_utensils')}}">UTENSILS</a></li>
+        <li><a href="{{url_for('add_recipe')}}">ADD RECIPE</a></li>
+        <li><a href="{{url_for('add_utensils')}}">ADD UTENSILS</a></li>
        </ul>
       <ul class="side-nav" id="mobile-demo">
         <li><a href="sass.html">Sass</a></li>
@@ -28,16 +31,7 @@
     </div>
   </nav>
   <nav>
-    <div class="nav-wrapper">
-      <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-        </div>
-      </form>
-    </div>
-  </nav>
+
 
 
 </header>
@@ -53,13 +47,29 @@
     <script>
     $(document).ready(function(){
     $(".button-collapse").sideNav();
-    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    $(document).ready(function(){
+  /* autoplay materialize carousel credited to https://codepen.io/nubtehy/pen/WyXveP*/
+  $('.carousel').carousel(
+  {
+    dist: 0,
+    padding: 0,
+    fullWidth: true,
+    indicators: false,
+    duration: 100,
+  }
+  );
+});
+
+autoplay()
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);
+}
     $('.collapsible').collapsible();
     $('select').formSelect();
 
 });
 </script>
-
 <footer class="page-footer">
           <div class="container">
             <div class="row">
@@ -78,14 +88,13 @@
               </div>
             </div>
           </div>
-
-
           <div class="footer-copyright">
             <div class="container">
-            © 2019 Gillian McDonnell
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            © 2019 Digi-Meals
+            <a class="grey-text text-lighten-4 right" href="{{url_for('add_utensils')}}">ADD UTENSILSMore Links</a>
             </div>
           </div>
         </footer>
+
    </body>
 </html>
